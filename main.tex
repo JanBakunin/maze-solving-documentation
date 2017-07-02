@@ -10,6 +10,7 @@
 \usepackage{url}
 \usepackage{booktabs}
 \usepackage{tabularx}
+\usepackage{bibgerm}
 
 \newcommand*{\quelle}{% 
   \footnotesize Quelle: 
@@ -99,8 +100,7 @@ Manche Microcontroller benutzen lediglich 4-bit Binärwörter und laufen ein seh
 \paragraph{Arduino Motor Shield Rev.3} Der Arduino Motor Shield basiert auf dem L298 Dual-Vollbrücken-Motortreiber und ist entworfen um mit induktiven Ladungen umzugehen die beispielsweise von unseren Motoren erzeugt werden. Der Motor Shield ermöglicht es die Geschwindigkeit und Richtung von beiden DC Motoren eigenständig zu regulieren.
 
 \vspace{0.5cm}
-\includegraphics[width=0.7\textwidth]{MotorShield_Front.jpg}
-
+\includegraphics[width=0.7\textwidth]{MotorShield_Front.jpg}\par
 \quelle\url{https://www.arduino.cc/de/uploads/Main/MotorShield_R3_Front.jpg.jpg}
 
 \paragraph{Mini Roboter Rover Chassis Kit} Wir haben uns entschieden einen Bausatz zu benutzen um uns das anfängliche Hardware Chaos zu ersparen. Das Kit enthält: 2 Räder, 2 DC Zahnrad Motoren, ein Stützrad, ein Metall Chasis und eine Metallplatte mit Befestigungen.
@@ -109,4 +109,19 @@ Da der Aufbau der in der Betriebsanleitung empfohlen ist nicht für unsere Zweck
 \vspace{0.5cm}
 
 \includegraphics[width=0.5\textwidth]{example.png}
+\newpage
+
+\paragraph{QTR-8A Reflektions-Sensoren-Array} Der QTR-8A ist zwar als Linien Sensor entworfen und wird auch so von uns genutzt, jedoch kann man ihn auch als Näherungsensor oder auch einfach als Reflektionssensor. Auf dem Modul befinden sich acht Infarotstrahler/Infarotempfänger (Phototransistoren) Paare in gleichmäßigen Intervallen. Jeder Phototransistor ist mit einem 'pull-up' Widerstand verbunden um die Spannung zu verteilen. Jeder angeschlossene Sensor gibt eigenständig eine Analoge Spannung zurück die zwischen 0V und 5V liegt. Geringere Spannung deutet auf eine höhere Reflektion hin.
+
+Der Sensor kann sehr gut zwischen schwarz und weiß unterscheiden weshalb er sich gut für den Roboter eignet, im Nachhinein wäre eine Sensor mit I$^2$C Anschluss besser gewesen da man sich so einige Kabel sparen kann.
+
+\vspace{0.5cm}
+\includegraphics[width=1\textwidth]{QTR-8A.jpg}\par
+\quelle\url{https://tinyurl.com/QTR8A-front}
+
+\subsection{Verwendete Libraries}
+\paragraph{Pololu QTR Reflectance Sensors}
+
+\bibliographystyle{plain}
+\bibliography{literatur}
 \end{document}
